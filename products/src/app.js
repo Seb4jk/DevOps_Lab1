@@ -24,6 +24,4 @@ app.post('/products',(req, res ) =>{
     res.status(201).send(products[id])
 })
 
-app.listen(3009, ()=>{
-    console.log("Listen 3009")
-})
+export default app
