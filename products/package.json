@@ -5,8 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "jest"
+    "start": "node src/server.js",
+    "test": "jest --coverage --collectCoverageFrom=./src/**"
   },
   "author": "",
   "license": "ISC",
@@ -24,7 +24,16 @@
   "jest": {
     "testEnvironment": "node",
     "coveragePathIgnorePatterns": [
-      "/node_modules/"
-    ]
+      "/node_modules/",
+      "/src/server.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
   }
 }
